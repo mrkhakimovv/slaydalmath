@@ -206,6 +206,11 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 .contact .chip{background:rgba(255,255,255,.07)}
 .sign{margin-top:48px;font-size:clamp(12px,1.2vw,15px);color:var(--ice);opacity:.85}
 
+/* ---- fullscreen toggle ---- */
+.fs-btn{position:absolute;top:22px;left:22px;z-index:10;width:34px;height:34px;border-radius:9px;border:none;background:transparent;color:rgba(220,231,250,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .3s,background .3s}
+.fs-btn:hover,.fs-btn:focus-visible{color:rgba(220,231,250,.65);background:rgba(255,255,255,.06)}
+.fs-btn svg{width:19px;height:19px}
+
 /* ---- nav ---- */
 #dots{position:fixed;right:clamp(10px,1.6vw,26px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:11px;z-index:50}
 #dots button{width:9px;height:9px;border-radius:50%;border:none;background:rgba(127,180,255,.4);cursor:pointer;transition:.3s;padding:0}
@@ -234,6 +239,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 1 · TITUL -->
 <section class="slide dark" id="s1">
+  <button id="fsBtn" class="fs-btn" aria-label="To&#8216;liq ekran" title="To&#8216;liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <span class="sym" style="top:8%;left:6%;font-size:120px">&#8721;</span>
   <span class="sym" style="bottom:10%;right:7%;font-size:160px;animation-delay:-6s">&#960;</span>
   <span class="sym" style="top:18%;right:20%;font-size:70px;animation-delay:-3s">&#8730;x</span>
@@ -493,6 +501,18 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 <div id="counter">1 / 11</div>
 
 <script>
+(function(){
+  var fsBtn=document.getElementById('fsBtn');
+  if(fsBtn){
+    fsBtn.addEventListener('click',function(){
+      if(!document.fullscreenElement){
+        (document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen||function(){}).call(document.documentElement);
+      }else{
+        (document.exitFullscreen||document.webkitExitFullscreen||function(){}).call(document);
+      }
+    });
+  }
+})();
 (function(){
   var deck=document.getElementById('deck');
   var slides=[].slice.call(document.querySelectorAll('.slide'));
