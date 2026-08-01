@@ -207,9 +207,11 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 .sign{margin-top:48px;font-size:clamp(12px,1.2vw,15px);color:var(--ice);opacity:.85}
 
 /* ---- fullscreen toggle ---- */
-.fs-btn{position:absolute;top:22px;left:22px;z-index:10;width:34px;height:34px;border-radius:9px;border:none;background:transparent;color:rgba(220,231,250,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .3s,background .3s}
-.fs-btn:hover,.fs-btn:focus-visible{color:rgba(220,231,250,.65);background:rgba(255,255,255,.06)}
-.fs-btn svg{width:19px;height:19px}
+.fs-btn{position:absolute;top:18px;left:18px;z-index:10;width:32px;height:32px;border-radius:8px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:#fff;mix-blend-mode:difference;opacity:0;transform:translateY(-12px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+.on .fs-btn{opacity:.22;transform:none}
+.fs-btn:hover,.fs-btn:focus-visible{opacity:.6}
+.fs-btn svg{width:17px;height:17px}
 
 /* ---- nav ---- */
 #dots{position:fixed;right:clamp(10px,1.6vw,26px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:11px;z-index:50}
@@ -228,6 +230,7 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
   .click-rv{transition:none}
+  .fs-btn{opacity:.22;transform:none;transition:none}
   .sym,.hint,.tap-hint{animation:none}
   .race-fill,.steps::after,.ring .fgc{transition:none}
   .on .race-fill{width:var(--w)}
@@ -239,7 +242,7 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 1 · TITUL -->
 <section class="slide dark" id="s1">
-  <button id="fsBtn" class="fs-btn" aria-label="To&#8216;liq ekran" title="To&#8216;liq ekran">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
   </button>
   <span class="sym" style="top:8%;left:6%;font-size:120px">&#8721;</span>
@@ -256,6 +259,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 1b · USTOZ HAQIDA -->
 <section class="slide dark" id="s1b">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <span class="sym" style="top:10%;right:6%;font-size:110px">&#8730;x</span>
   <span class="sym" style="bottom:12%;left:44%;font-size:80px;animation-delay:-6s">&#8734;</span>
   <div class="wrap">
@@ -278,6 +284,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 2 · AI SHIDDATI -->
 <section class="slide light" id="s2">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">01 &middot; Dunyo o&#8216;zgardi</div>
     <h2 class="rv d1">Sun&#8217;iy intellekt &#8212; tarixdagi eng tez texnologiya</h2>
@@ -294,6 +303,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 3 · MUAMMO -->
 <section class="slide light" id="s3">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">02 &middot; Muammo</div>
     <h2 class="rv d1">Har bir repetitorning og&#8216;riqli nuqtasi</h2>
@@ -310,6 +322,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 4 · ALMATH INTRO -->
 <section class="slide dark" id="s4">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <span class="sym" style="top:12%;right:8%;font-size:110px">&#402;(x)</span>
   <span class="sym" style="bottom:14%;left:5%;font-size:90px;animation-delay:-7s">&#8747;</span>
   <div class="wrap">
@@ -333,6 +348,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 5 · QANDAY ISHLAYDI -->
 <section class="slide light" id="s5">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">04 &middot; Jarayon</div>
     <h2 class="rv d1">O&#8216;quvchi uchun &#8212; atigi 4 qadam</h2>
@@ -349,6 +367,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 6 · NATIJA KARTASI -->
 <section class="slide light" id="s6">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">05 &middot; Natija</div>
     <h2 class="rv d1">AI shunchaki &#8220;xato&#8221; demaydi &#8212; o&#8216;rgatadi</h2>
@@ -377,6 +398,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 7 · ALDAB BO'LMAYDI -->
 <section class="slide light" id="s7">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">06 &middot; Nazorat</div>
     <h2 class="rv d1">Tizimni aldab bo&#8216;lmaydi</h2>
@@ -406,6 +430,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 8 · OTA-ONA NIMA KO'RADI -->
 <section class="slide light" id="s8">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">07 &middot; Shaffoflik</div>
     <h2 class="rv d1">Siz nimalarni kuzatib borasiz</h2>
@@ -421,6 +448,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 9 · FOYDA -->
 <section class="slide light" id="s9">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">08 &middot; Natija</div>
     <h2 class="rv d1">Bu birgalikda bizga nima beradi?</h2>
@@ -435,6 +465,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 10b · JONLI NAMOYISH -->
 <section class="slide dark" id="s10b">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <span class="sym" style="top:10%;left:7%;font-size:110px">&#8721;</span>
   <span class="sym" style="bottom:14%;right:8%;font-size:130px;animation-delay:-7s">&#960;</span>
   <div class="wrap" style="text-align:center">
@@ -450,6 +483,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 10 · NARX -->
 <section class="slide light" id="s10">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <div class="wrap">
     <div class="eyebrow rv">10 &middot; Shartlar</div>
     <h2 class="rv d1">Narx haqida ochiq gaplashamiz</h2>
@@ -482,6 +518,9 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <!-- 11 · YAKUN -->
 <section class="slide dark final" id="s11">
+  <button class="fs-btn" aria-label="To‘liq ekran" title="To‘liq ekran">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
   <span class="sym" style="top:10%;right:10%;font-size:130px">&#960;</span>
   <span class="sym" style="bottom:12%;left:8%;font-size:100px;animation-delay:-5s">&#8721;</span>
   <div class="wrap">
@@ -502,16 +541,17 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(22px,3vw,40px);line-h
 
 <script>
 (function(){
-  var fsBtn=document.getElementById('fsBtn');
-  if(fsBtn){
-    fsBtn.addEventListener('click',function(){
+  var fsBtns=document.querySelectorAll('.fs-btn');
+  fsBtns.forEach(function(fsBtn){
+    fsBtn.addEventListener('click',function(e){
+      e.stopPropagation();
       if(!document.fullscreenElement){
         (document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen||function(){}).call(document.documentElement);
       }else{
         (document.exitFullscreen||document.webkitExitFullscreen||function(){}).call(document);
       }
     });
-  }
+  });
 })();
 (function(){
   var deck=document.getElementById('deck');
